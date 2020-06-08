@@ -1,0 +1,167 @@
+:root {
+    --subtle-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+header {
+    text-align: center;
+    background: #ff9234;
+    border-radius: 0.5em;
+}
+
+div.header {
+    padding: 20px;
+}
+
+div.header>h1 {
+    font-size: 40px;
+}
+
+ul.post-list {
+    list-style-type: circle;
+    padding-left: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+
+/*paleta de colores
+*d92027 red; 
+ff9234 orange; 
+ffcd3c yellow; 
+35d0ba*/
+
+
+/* NAVBAR */
+
+nav {
+    overflow: hidden;
+    background-color: dodgerblue;
+    border-radius: 0 0 0.5em 0.5em;
+    display: flex;
+}
+
+nav>a {
+    width: auto;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1em 2em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+nav>a:hover {
+    background-color: black;
+}
+
+.unorder {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+
+.lis a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: width 0.5s;
+    width: 100px;
+}
+
+.lis a:hover {
+    background-color: #d92027;
+    width: 150px;
+}
+
+
+/* FLEX LAYOUT */
+
+.container {
+    display: flex;
+}
+
+.centercolumn {
+    flex: 3;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.rightcolumn {
+    flex: 2;
+    padding-left: 20px;
+}
+
+
+/* POST */
+
+.post-title {
+    font-size: 2em;
+}
+
+.post-age {
+    color: grey;
+}
+
+.login-link {
+    margin-left: auto;
+    background-color: black;
+}
+
+.responsive-img {
+    background-color: #aaa;
+    width: 100%;
+}
+
+.card {
+    background-color: #ffcd3c;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 0.5em;
+    box-shadow: var(--subtle-shadow);
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 20px;
+    text-align: left;
+    background: #35d0ba;
+    margin-top: 20px;
+    border-radius: 0.5em;
+}
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+    .rightcolumn {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    .login-link {
+        margin: 0;
+    }
+}
